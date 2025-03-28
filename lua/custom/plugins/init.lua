@@ -239,4 +239,5 @@ return {
       'rcarriga/nvim-notify',
     },
   },
+  { 'github/copilot.vim', opts = {} },
 }
