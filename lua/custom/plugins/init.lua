@@ -46,7 +46,7 @@ return {
         desc = 'Smart Find Files',
       },
       {
-        '<leader>rg',
+        '<leader>g',
         function()
           Snacks.picker.grep()
         end,
