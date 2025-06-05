@@ -215,11 +215,11 @@ return {
       },
     },
   },
-  -- about the conda
-  {
-    'kmontocam/nvim-conda',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-  },
+  -- -- about the conda
+  -- {
+  --   'kmontocam/nvim-conda',
+  --   dependencies = { 'nvim-lua/plenary.nvim' },
+  -- },
   -- about the render markdown
   {
     'MeanderingProgrammer/render-markdown.nvim',
@@ -247,4 +247,24 @@ return {
     },
   },
   { 'github/copilot.vim', opts = {} },
+  {
+    'xiyaowong/transparent.nvim',
+    config = function()
+      require('transparent').setup {
+        enable = true, -- 預設啟用透明
+        extra_groups = {
+          'NormalFloat',
+          'NvimTreeNormal',
+          'TelescopeNormal',
+          'TelescopeBorder',
+          'TelescopePromptBorder',
+          'TelescopeResultsBorder',
+          'TelescopePreviewBorder',
+        },
+        exclude = {}, -- 可在這裡排除不要透明的 group
+      }
+
+      vim.cmd 'TransparentEnable' -- 啟用透明功能
+    end,
+  },
 }
